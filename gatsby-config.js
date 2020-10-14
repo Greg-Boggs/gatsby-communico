@@ -4,7 +4,15 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
+// In your gatsby-config.js
 module.exports = {
-  /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-source-drupal`,
+      options: {
+        baseUrl: `https://master-7rqtwti-su7dp7cnlghym.us-3.platformsh.site/`,
+        apiBase: `jsonapi`, // optional, defaults to `jsonapi`
+      },
+    },
+  ],
 }
